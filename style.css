@@ -1,0 +1,118 @@
+html, body, input {
+    font-family: arial, sans-serif;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+/* [FORM] */
+
+#todo-wrap input {
+    box-sizing: border-box;
+    font-size: 0.9em;
+}
+
+#todo-wrap input[type=text] {
+    padding: 10px 8px;
+}
+
+#todo-wrap input[type=button], #todo-wrap input[type=submit] {
+    padding: 8px 5px;
+    color: #fff;
+    background: #CF585C;
+    border: 2px solid #CF585C;
+    cursor: pointer;
+}
+
+/* [CLEARFIX] */
+
+#todo-wrap .clearfix {
+    overflow: auto;
+}
+
+#todo-wrap .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* [WRAPPER] */
+
+#todo-wrap {
+    max-width: 500px;
+    background: #f2f2f2;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* [HEADER] */
+
+#todo-wrap h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+/* [ADD] */
+
+#todo-form {
+    margin: 10px 0;
+}
+
+#todo-form input {
+    display: block;
+    float: left;
+}
+
+#todo-form input[type=text] {
+    width: 85%;
+}
+
+#todo-form input[type=submit] {
+    width: 15%;
+    background: #5866CF;
+    border: 2px solid #5866CF;
+}
+
+/* [DELETE] */
+
+#todo-del {}
+
+/* [LIST ITEMS] */
+
+#todo-list .clearfix {
+    margin-top: 8px;
+}
+
+#todo-list .clearfix div, #todo-list .clearfix input {
+    box-sizing: border-box;
+    float: left;
+    display: block;
+}
+
+#todo-list .item {
+    border: 1px solid #ddd;
+    background: #fff;
+    width: 80%;
+    padding: 10px;
+}
+
+#todo-list .item.cx {
+    background: #FFE1D7;
+    text-decoration: line-through;
+}
+
+#todo-list .item.done {
+    background: #DCFFD7;
+}
+
+#todo-list .clearfix input {
+    width: 10%;
+}
+
+#todo-list input.bdone {
+    background: #4AA53D;
+    border: 2px solid #4AA53D;
+}
