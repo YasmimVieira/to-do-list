@@ -1,118 +1,165 @@
-html, body, input {
-    font-family: arial, sans-serif;
-}
-
-html, body {
-    padding: 0;
+body {
     margin: 0;
 }
 
-/* [FORM] */
-
-#todo-wrap input {
-    box-sizing: border-box;
-    font-size: 0.9em;
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
 }
 
-#todo-wrap input[type=text] {
-    padding: 10px 8px;
+.todo-list {
+    background-color: #0B2027;
+    font-family: "Space Mono", monospace;
+    padding: 1rem;
+    min-width: 400px;
+    min-height: 300px;
 }
 
-#todo-wrap input[type=button], #todo-wrap input[type=submit] {
-    padding: 8px 5px;
-    color: #fff;
-    background: #CF585C;
-    border: 2px solid #CF585C;
+.title {
+    border-bottom: 1px solid rgba(246, 241, 209, 0.5);
+    font-size: 1.5rem;
+    font-family: "BioRhyme", serif;
+    color: #F6F1D1;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.form-input, .form-button {
+    border-radius: 0;
+    padding: 0.75rem;
+    font-size: 0.75rem;
+}
+
+.form-input {
+    outline: none;
+    background-color: #F6F1D1;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-button {
+    border: 1px;
+    background: #F6F1D1;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 0.25rem;
+}
+
+.form-button:hover {
+    color: #F6F1D1;
+    background: rgba(246, 241, 209, 0.1);
+}
+
+body {
+    margin: 0;
+}
+
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.todo-list {
+    background-color: #0B2027;
+    font-family: "Space Mono", monospace;
+    padding: 1rem;
+    min-width: 400px;
+    min-height: 300px;
+}
+
+.title {
+    border-bottom: 1px solid rgba(246, 241, 209, 0.5);
+    font-size: 1.5rem;
+    font-family: "BioRhyme", serif;
+    color: #F6F1D1;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.form-input, .form-button {
+    border-radius: 0;
+    padding: 0.75rem;
+    font-size: 0.75rem;
+}
+
+.form-input {
+    outline: none;
+    background-color: #F6F1D1;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-button {
+    border: 1px;
+    background: #F6F1D1;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 0.25rem;
+}
+
+.form-button:hover {
+    color: #F6F1D1;
+    background: rgba(246, 241, 209, 0.1);
+}
+
+.list {
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.task {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #F6F1D1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 1rem 3rem;
+}
+
+.check-button, .delete-button {
+    background-color: #F6F1D1;
+    border: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    outline: none;
+    border-radius: 2px;
     cursor: pointer;
 }
 
-/* [CLEARFIX] */
-
-#todo-wrap .clearfix {
-    overflow: auto;
+.task.done .check-button {
+    background-color: #46494C;
+    color: #F6F1D1;
 }
 
-#todo-wrap .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+.check-icon {
+    display: block;
+    padding: 1px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
 }
 
-/* [WRAPPER] */
-
-#todo-wrap {
-    max-width: 500px;
-    background: #f2f2f2;
-    padding: 20px;
-    margin: 0 auto;
+.task.done .check-icon {
+    background-color: #0B2027;
 }
 
-/* [HEADER] */
-
-#todo-wrap h1 {
-    font-size: 1.5em;
+.content {
     margin: 0;
-    color: #333;
 }
 
-/* [ADD] */
-
-#todo-form {
-    margin: 10px 0;
-}
-
-#todo-form input {
-    display: block;
-    float: left;
-}
-
-#todo-form input[type=text] {
-    width: 85%;
-}
-
-#todo-form input[type=submit] {
-    width: 15%;
-    background: #5866CF;
-    border: 2px solid #5866CF;
-}
-
-/* [DELETE] */
-
-#todo-del {}
-
-/* [LIST ITEMS] */
-
-#todo-list .clearfix {
-    margin-top: 8px;
-}
-
-#todo-list .clearfix div, #todo-list .clearfix input {
-    box-sizing: border-box;
-    float: left;
-    display: block;
-}
-
-#todo-list .item {
-    border: 1px solid #ddd;
-    background: #fff;
-    width: 80%;
-    padding: 10px;
-}
-
-#todo-list .item.cx {
-    background: #FFE1D7;
+.task.done .content {
     text-decoration: line-through;
 }
 
-#todo-list .item.done {
-    background: #DCFFD7;
-}
-
-#todo-list .clearfix input {
-    width: 10%;
-}
-
-#todo-list input.bdone {
-    background: #4AA53D;
-    border: 2px solid #4AA53D;
-}
+/*# sourceMappingURL=style.css.map */
